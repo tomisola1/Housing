@@ -22,7 +22,7 @@ function Offers() {
     const fetchListings = async () => {
       try {
         // Get reference
-        const listingsRef = collection(db, "listings");
+        const listingsRef = collection(db, "Listings");
 
         // Create a query
         const q = query(
@@ -61,7 +61,7 @@ function Offers() {
   const onFetchMoreListings = async () => {
     try {
       // Get reference
-      const listingsRef = collection(db, "listings");
+      const listingsRef = collection(db, "Listings");
 
       // Create a query
       const q = query(
