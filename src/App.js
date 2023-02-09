@@ -11,9 +11,9 @@ import SignUp from "./pages/SignUp";
 import ForgotPassword from "./pages/ForgotPassword";
 import Navbar from "./components/Navbar";
 import CreateListing from "./pages/CreateListing";
-// import EditListing from "./pages/EditListing";
-// import Listing from "./pages/Listing";
-// import Contact from "./pages/Contact";
+import EditListing from "./pages/EditListing";
+import Listing from "./pages/Listing";
+import Contact from "./pages/Contact";
 
 function App() {
   return (
@@ -30,12 +30,12 @@ function App() {
           <Route path="/sign-up" element={<SignUp />} />
           <Route path="/forgot-password" element={<ForgotPassword />} />
           <Route path="/create-listing" element={<CreateListing />} />
-          {/* <Route path='/edit-listing/:listingId' element={<EditListing />} />
+          <Route path="/edit-listing/:listingId" element={<EditListing />} />
           <Route
-            path='/category/:categoryName/:listingId'
+            path="/category/:categoryName/:listingId"
             element={<Listing />}
           />
-          <Route path='/contact/:landlordId' element={<Contact />} /> */}
+          <Route path="/contact/:landlordId" element={<Contact />} />
         </Routes>
         <Navbar />
       </Router>

@@ -34,7 +34,7 @@ function Profile() {
 
   useEffect(() => {
     const fetchUserListings = async () => {
-      const listingsRef = collection(db, "listings");
+      const listingsRef = collection(db, "Listings");
 
       const q = query(
         listingsRef,
@@ -94,7 +94,7 @@ function Profile() {
 
   const onDelete = async (listingId) => {
     if (window.confirm("Are you sure you want to delete?")) {
-      await deleteDoc(doc(db, "listings", listingId));
+      await deleteDoc(doc(db, "Listings", listingId));
       const updatedListings = listings.filter(
         (listing) => listing.id !== listingId
       );
