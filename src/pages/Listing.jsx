@@ -5,6 +5,9 @@ import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet";
 import { Navigation, Pagination, Scrollbar, A11y } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import "swiper/css/scrollbar";
 import { getDoc, doc } from "firebase/firestore";
 import { getAuth } from "firebase/auth";
 import { db } from "../Firebase.config";
@@ -48,7 +51,7 @@ function Listing() {
         modules={[Navigation, Pagination, Scrollbar, A11y]}
         pagination={{ clickable: true }}
         navigation={true}
-        scrollbar={{ dragable: true }}
+        // scrollbar={{ dragable: true }}
       >
         {listing.imageUrls.map((url, index) => (
           <SwiperSlide key={index}>

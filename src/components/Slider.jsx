@@ -5,6 +5,9 @@ import { db } from "../Firebase.config";
 import { Navigation, Pagination, Scrollbar, A11y } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import "swiper/css/scrollbar";
 import Spinner from "./Spinner";
 
 function Slider() {
@@ -52,7 +55,7 @@ function Slider() {
           slidesPerView={1}
           modules={[Navigation, Pagination, Scrollbar, A11y]}
           pagination={{ clickable: true }}
-          navigation
+          navigation={true}
           scrollbar={{ dragable: true }}
         >
           {listings.map(({ data, id }) => (
