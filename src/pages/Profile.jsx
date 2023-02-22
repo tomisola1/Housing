@@ -62,7 +62,7 @@ function Profile() {
 
   const onLogout = () => {
     auth.signOut();
-    navigate("/");
+    navigate("/explore");
   };
 
   const onSubmit = async () => {
