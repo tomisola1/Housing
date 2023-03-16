@@ -36,7 +36,7 @@ function SignIn() {
       );
 
       if (userCredential.user) {
-        navigate("/explore");
+        navigate("/");
       }
     } catch (error) {
       toast.error("Bad User Credentials");

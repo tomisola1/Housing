@@ -59,7 +59,7 @@ function EditListing() {
   useEffect(() => {
     if (listing && listing.userRef !== auth.currentUser.uid) {
       toast.error("You can not edit that listing");
-      navigate("/explore");
+      navigate("/");
     }
   });
 
@@ -74,7 +74,7 @@ function EditListing() {
         setFormData({ ...docSnap.data(), address: docSnap.data().location });
         setLoading(false);
       } else {
-        navigate("/explore");
+        navigate("/");
         toast.error("Listing does not exist");
       }
     };
